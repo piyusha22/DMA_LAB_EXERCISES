@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val calcButton: Button = findViewById<Button>(R.id.calculate_button)
         val radioGroup: RadioGroup = findViewById<RadioGroup>(R.id.tip_options)
         val roundUpSwitch: Switch = findViewById<Switch>(R.id.round_up_switch)
-        val tipAmountText:TextView = findViewById<TextView>(R.id.tip_result)
+        val tipAmountText: TextView = findViewById<TextView>(R.id.tip_result)
 
         calcButton.setOnClickListener {
             val cost = costOfServiceText.text.toString()
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             if (roundUpSwitch.isChecked) {
                 tipAmount = tipAmount.roundToInt().toDouble()
             }
-            tipAmountText.text = "Tip Amount : $$tipAmount"
+            tipAmountText.text = "Tip Amount: $$tipAmount"
         }
     }
 }
